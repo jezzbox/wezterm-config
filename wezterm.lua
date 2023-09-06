@@ -1,5 +1,5 @@
 local wezterm = require 'wezterm'
-local bindings = require('config.bindings')
+local bindings = require 'bindings'
 local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
