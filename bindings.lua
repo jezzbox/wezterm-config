@@ -1,7 +1,22 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
 local bindings = {
+  {
+    key = 'P',
+    mods = 'CTRL|SHIFT',
+    action = act.ScrollByLine(-2)
+  },
+  {
+    key = 'N',
+    mods = 'CTRL|SHIFT',
+    action = act.ScrollByLine(2)
+  },
 
+  {
+    key = 'E',
+    mods = 'CTRL|SHIFT',
+    action = act.ScrollToBottom()
+  },
   {
     key = 'B',
     mods = 'CTRL|SHIFT',
@@ -11,16 +26,6 @@ local bindings = {
     key = 'F',
     mods = 'CTRL|SHIFT',
     action = act.ActivatePaneDirection 'Right'
-  },
-  {
-    key = 'N',
-    mods = 'CTRL|SHIFT',
-    action = act.ActivatePaneDirection 'Down'
-  },
-  {
-    key = 'P',
-    mods = 'CTRL|SHIFT',
-    action = act.ActivatePaneDirection 'Up'
   },
   {
     key = 'B',
